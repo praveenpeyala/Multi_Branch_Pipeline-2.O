@@ -2,9 +2,10 @@ pipeline {
   agent any
 
   stages {
-    stage ('Setup') {
+    stage ('Setup - signin') {
       steps {
-        git branch: 'argroups', url: 'https://github.com/praveenpeyala/Multi_Branch_Pipeline-2.O.git'
+        git branch: 'signin', url: 'https://github.com/praveenpeyala/Multi_Branch_Pipeline-2.O.git'
+        sh 'mvn clean'
       }
     }
     stage ('Compile') {
