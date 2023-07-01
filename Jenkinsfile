@@ -1,8 +1,7 @@
 pipeline {
   agent any
-
   stages {
-    stage ('Setup - master') {
+    stage ('Setup - master branch') {
       steps {
         git branch: 'master', url: 'https://github.com/praveenpeyala/Multi_Branch_Pipeline-2.O.git'
       	sh 'mvn clean'
