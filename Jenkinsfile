@@ -1,8 +1,7 @@
 pipeline {
   agent any
-
   stages {
-    stage ('Setup - signin') {
+    stage ('Setup - signin branch') {
       steps {
         git branch: 'signin', url: 'https://github.com/praveenpeyala/Multi_Branch_Pipeline-2.O.git'
         sh 'mvn clean'
